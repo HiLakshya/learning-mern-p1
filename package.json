@@ -5,7 +5,12 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start": "node app.js",
+    "scripts": {
+      "build": "netlify-lambda build src/functions",
+      "start": "netlify-lambda serve src/functions",
+      "deploy": "netlify-lambda deploy src/functions"
+    }
   },
   "author": "",
   "license": "ISC",
@@ -15,6 +20,9 @@
     "ejs": "^2.6.1",
     "express": "^4.16.3",
     "lodash": "^4.17.21",
-    "mongoose": "^7.2.2"
+    "mongoose": "^7.2.2",
+    "netlify-cli": "^15.3.1",
+    "netlify-lambda": "^2.0.16",
+    "serverless-http": "^3.2.0"
   }
 }
